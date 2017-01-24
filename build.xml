@@ -1,2 +1,14 @@
-jnfohflndohello world
+<project name="myntra">
+
+ <target name="compile" depends="">
+  <mkdir dir="class"/>
+  <javac srcdir="src" destdir="class"/>
+ </target>
+
+ <target name="package" depends="">
+  <jar basedir="class" destfile="build.jar"/>
+ </target>
+ 
+ <target name="logs" depends="">
+  <fileset destdir="
 
