@@ -1,14 +1,34 @@
-<project name="myntra">
+<project name="myntra" default="">
 
- <target name="compile" depends="">
-  <mkdir dir="class"/>
-  <javac srcdir="src" destdir="class"/>
- </target>
+	<target name="compile" depends="">
+		<mkdir dir="class"/>
+		<javac srcdir="src" destdir="class"/>
+	</target>
 
- <target name="package" depends="">
-  <jar basedir="class" destfile="build.jar"/>
- </target>
- 
- <target name="logs" depends="">
-  <fileset destdir="
 
+	<target name="package" depends="">
+		<jar basedir="class" destfile"package/login.jar"/>
+	</target>
+
+	<target name="set" depends="">
+		<fileset dir="src">
+			<include file="**/*.java"/>
+		</fileset>
+	</target>
+
+	<tstamp>
+		<format property="mytime" pattern="MM/dd/yy_mm:ss"/>
+	</tstamp>
+
+	<target name="backup" depends="">
+		<war destdir="package" destfile="backup/${mytime}_myntra.war"/>
+	</target>
+
+
+	<target name="clean">
+		<delete dir="backup"/>
+		<delete dir="package"/>
+		<delete dir="class"/>
+	</target>
+
+</project>
