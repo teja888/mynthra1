@@ -3,7 +3,7 @@
 	<echo message="ant version:${ant.version}"/>
 
 	<target name="compile">
-		<echo messae="start compiling"/>
+		<echo message="start compiling"/>
 		<mkdir dir="class"/>
 		<javac srcdir="src" destdir="class"/>
 	</target>
