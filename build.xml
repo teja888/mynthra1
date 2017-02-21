@@ -1,6 +1,9 @@
 <project name="myntra" default="">
 
+	<echo message="ant version:${ant.version}"/>
+
 	<target name="compile" depends="">
+		<echo messae="start compiling"/>
 		<mkdir dir="class"/>
 		<javac srcdir="src" destdir="class"/>
 	</target>
