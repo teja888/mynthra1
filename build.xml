@@ -10,7 +10,7 @@
 
 
 	<target name="package" depends="compile">
-		<jar basedir="class" destfile"package/login.jar"/>
+		<jar basedir="class" destfile="package/login.jar"/>
 	</target>
 
 	<target name="set" depends="package">
