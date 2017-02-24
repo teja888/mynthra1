@@ -24,7 +24,7 @@
 	</tstamp>
 
 	<target name="backup" depends="package">
-		<war destdir="package" destfile="backup/${mytime}_myntra.war"/>
+		<war basedir="package" destfile="backup/${mytime}_myntra.war" needxmlfile="false" />
 	</target>
 
 
