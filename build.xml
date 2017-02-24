@@ -13,17 +13,17 @@
 		<jar basedir="class" destfile="package/login.jar"/>
 	</target>
 
-	<target name="set" depends="package">
+	<!--target name="set" depends="package">
 		<fileset dir="src">
 			<include file="**/*.java"/>
 		</fileset>
-	</target>
+	</target-->
 
 	<tstamp>
 		<format property="mytime" pattern="MM/dd/yy_mm:ss"/>
 	</tstamp>
 
-	<target name="backup" depends="set">
+	<target name="backup" depends="package">
 		<war destdir="package" destfile="backup/${mytime}_myntra.war"/>
 	</target>
 
