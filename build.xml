@@ -1,31 +1,18 @@
-<project name="myntra" default="">
+<project name="myntra" default="compile">
 
 	<echo message="ant version:${ant.version}"/>
 
-	<target name="compile" depends="">
+	<target name="compile" depends="package">
 		<echo messae="start compiling"/>
 		<mkdir dir="class"/>
 		<javac srcdir="src" destdir="class"/>
 	</target>
 
 
-	<target name="package" depends="">
+	<target name="package" depends="clean">
 		<jar basedir="class" destfile="package/login.jar"/>
 	</target>
 
-	<target name="set" depends="">
-		<fileset dir="src">
-			<include file="**/*.java"/>
-		</fileset>
-	</target>
-
-	<tstamp>
-		<format property="mytime" pattern="MM/dd/yy_mm:ss"/>
-	</tstamp>
-
-	<target name="backup" depends="">
-		<war basedir="./package" destfile="backup/${mytime}_myntra.war"/>
-	</target>
 
 
 	<target name="clean">
