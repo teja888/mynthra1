@@ -1,8 +1,8 @@
-<project name="mynthra1" default="clean">
+<project name="mynthra1" default="compile">
 
 	<echo message="ant version:${ant.version}"/>
 
-	<target name="compile">
+	<target name="compile" depends="package">
 		<echo messae="start compiling"/>
 		<mkdir dir="class"/>
 		<javac srcdir="src" destdir="class"/>
@@ -15,7 +15,7 @@
 
 
 
-	<target name="clean" depends="compile">
+	<target name="clean">
 		<delete dir="backup"/>
 		<delete dir="package"/>
 		<delete dir="class"/>
