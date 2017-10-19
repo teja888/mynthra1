@@ -1,4 +1,4 @@
-<project name="myntra" default="clean">
+<project name="mynthra1" default="clean">
 
 	<echo message="ant version:${ant.version}"/>
 
