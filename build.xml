@@ -1,23 +1,24 @@
-<project name="mynthra1" default="compile">
+<project name="mynthra1" default="package">
 
 	<echo message="ant version:${ant.version}"/>
 
-	<target name="compile" depends="package">
+	<target name="compile">
 		<echo messae="start compiling"/>
 		<mkdir dir="class"/>
 		<javac srcdir="src" destdir="class"/>
 	</target>
 
 
-	<target name="package" depends="clean">
-		<jar basedir="class" destfile="package/login.jar"/>
+	<target name="package" depends="compile">
+		<jar basedir="class" destfile="lib/login.jar"/>
 	</target>
 
 
 
 	<target name="clean">
 	
-		<delete dir="package"/>
+		<delete dir="lib"/>
+		<delete dir="class"/>
 	
 	</target>
 
