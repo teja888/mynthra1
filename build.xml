@@ -16,9 +16,9 @@
 
 
 	<target name="clean">
-		<delete dir="backup"/>
+	
 		<delete dir="package"/>
-		<delete dir="class"/>
+	
 	</target>
 
 </project>
