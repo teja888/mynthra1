@@ -10,14 +10,14 @@
 
 
 	<target name="package" depends="compile">
-		<jar basedir="class" destfile="lib/login.jar"/>
+		<jar basedir="class" destfile="lab/login.jar"/>
 	</target>
 
 
 
 	<target name="clean">
 	
-		<delete dir="lib"/>
+		<delete dir="lab"/>
 		<delete dir="class"/>
 	
 	</target>
